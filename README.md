@@ -36,7 +36,7 @@ class CarStruct
 }
 ```
 
-To create the struct, simply instanciate a new object with an array of properties:
+To create the struct, simply instantiate a new object with an array of properties:
 
 ```php
 <?php
@@ -59,4 +59,4 @@ If any of the parameters are not of expected value, the constructor will throw a
 
 MIT
 
-Copyright © [Angle Software](https://angle.software)
+Copyright © 2019 [Angle Software](https://angle.software)
