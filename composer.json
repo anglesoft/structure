@@ -1,0 +1,28 @@
+{
+    "name": "angle/structure",
+    "type": "library",
+    "description": "Bring structs to PHP",
+    "keywords": [
+        "php",
+        "struct",
+        "structs"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ben Villiere",
+            "email": "code@angle.software"
+        }
+    ],
+    "require": {
+        "php": "^7.1"
+    },
+    "require-dev": {
+        "nesbot/carbon": "^2.11",
+        "phpunit/phpunit": "^7.5",
+        "symfony/var-dumper": "^4.2"
+    },
+    "autoload": {
+        "classmap": ["src/"]
+    }
+}
