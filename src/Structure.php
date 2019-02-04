@@ -20,7 +20,7 @@ trait Structure
 
         foreach ($mirror->getDefaultProperties() as $property => $default) {
             if (! in_array($property, array_keys($properties))) {
-                throw new Exception("'{$property}' is missing on struct {$class}");
+                throw new Exception("'{$property}' is missing on struct {$class}.");
             }
 
             $value = $properties[$property];
