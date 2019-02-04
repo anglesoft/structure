@@ -53,7 +53,7 @@ $s = new CarStruct([
 ]);
 ```
 
-If any of the parameters are not of expected value, the constructor will throw an error.
+If any of the parameters are not of expected value, the constructor will throw an ```InvalidArgumentException``` error.
 
 ## Licence
 
