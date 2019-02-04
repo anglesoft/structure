@@ -19,7 +19,7 @@ Structs are php classes that make the use of the ```Structure``` trait. The trai
 ```php
 <?php
 
-namespace App\Structures;
+namespace App\Structs;
 
 use Angle\Structure\Structure;
 
@@ -30,9 +30,33 @@ class CarStruct
     public $id = 0;
     public $model = '';
     public $mark = '';
-    public $weight = 0.0;
+    public $range = 0;
     public $power = 0.0;
     public $createdAt = 'Carbon\Carbon';
-    public $updatedAt = 'Carbon\Carbon';
 }
 ```
+
+To create the struct, simply instanciate a new object with an array of properties:
+
+```php
+<?php
+
+use App\Structs\CarStruct;
+
+$s = new CarStruct([
+    'id' => 12,
+    'model' => 'Model S',
+    'mark' => 'Tesla',
+    'range' => 315,
+    'power' => 560,
+    'createdAt' => Carbon::now(),
+]);
+```
+
+If any of the parameters are not of expected value, the constructor will throw an error.
+
+## Licence
+
+MIT
+
+Copyright © [Angle Software](https://angle.software)
