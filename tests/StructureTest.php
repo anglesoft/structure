@@ -65,7 +65,7 @@ final class StructureTest extends TestCase
             'hash' => uniqid(),
             'success' => true,
             'amount' => 1.0,
-            'time' => 'Angle\Time',
+            'time' => 'Carbon\Carbon',
         ]);
     }
 
@@ -78,7 +78,7 @@ final class StructureTest extends TestCase
             'hash' => 0, // should be (string) ''
             'success' => true,
             'amount' => 1.0,
-            'time' => 'Angle\Time',
+            'time' => 'Carbon\Carbon',
         ]);
     }
 
@@ -91,7 +91,7 @@ final class StructureTest extends TestCase
             'hash' => uniqid(),
             'success' => 'true', // should be (bool) true|false
             'amount' => 1.0,
-            'time' => 'Angle\Time',
+            'time' => 'Carbon\Carbon',
         ]);
     }
 
@@ -104,13 +104,13 @@ final class StructureTest extends TestCase
             'hash' => uniqid(),
             'success' => true,
             'amount' => '1.0', // should be (double) 0.0
-            'time' => 'Angle\Time',
+            'time' => 'Carbon\Carbon',
         ]);
     }
 
     public function testInvalidPropClass()
     {
-        $this->expectException(Error::class);
+        $this->expectException(Exception::class);
 
         $transaction = new Transaction([
             'id' => 0,
@@ -118,6 +118,19 @@ final class StructureTest extends TestCase
             'success' => true,
             'amount' => 0.0,
             'time' => 'foo', // should be (object) Carbon\Carbon
+        ]);
+    }
+
+    public function testInvalidPropClassType()
+    {
+        $this->expectException(Exception::class);
+
+        $transaction = new Transaction([
+            'id' => 0,
+            'hash' => uniqid(),
+            'success' => true,
+            'amount' => 0.0,
+            'time' => 'stdClass', // should be (object) Carbon\Carbon
         ]);
     }
 }

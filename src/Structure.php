@@ -26,6 +26,10 @@ trait Structure
             $value = $properties[$property];
 
             if ($this->isClass($default)) {
+                if (! $value instanceof $default) {
+                    throw new Exception("'{$property}' must be of type {$default}.");
+                }
+
                 $this->{$property} = is_object($value) ? $value : new $value;
 
                 continue;
