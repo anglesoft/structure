@@ -1,8 +1,9 @@
 <?php
 
-use PHPUnit\Framework\TestCase;
 use Angle\Structure\Structure;
+use Carbon\Carbon;
 use InvalidArgumentException as Exception;
+use PHPUnit\Framework\TestCase;
 
 class Transaction
 {
@@ -12,7 +13,7 @@ class Transaction
     public $hash = '';
     public $success = false;
     public $amount = 0.0;
-    public $time = 'Carbon\Carbon';
+    public $time = Carbon::class;
 }
 
 final class StructureTest extends TestCase

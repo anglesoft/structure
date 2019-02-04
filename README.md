@@ -22,6 +22,7 @@ Structs are php classes that make the use of the ```Structure``` trait. The trai
 namespace App\Structs;
 
 use Angle\Structure\Structure;
+use Carbon\Carbon;
 
 class CarStruct
 {
@@ -32,7 +33,7 @@ class CarStruct
     public $mark = '';
     public $range = 0;
     public $power = 0.0;
-    public $createdAt = 'Carbon\Carbon';
+    public $createdAt = Carbon::class;
 }
 ```
 
