@@ -8,7 +8,9 @@ While we wait for PHP to implement typed properties on classes, let's have fun f
 
 Install the Angle\Structure package via Composer:
 
-```composer require angle/structure```
+```
+composer require angle/structure
+```
 
 ## Your First Struct
 
@@ -21,13 +23,15 @@ namespace App\Structures;
 
 use Angle\Structure\Structure;
 
-class UserStruct
+class CarStruct
 {
     use Structure;
 
     public $id = 0;
-    public $name = '';
-    public $email = '';
+    public $model = '';
+    public $mark = '';
+    public $weight = 0.0;
+    public $power = 0.0;
     public $createdAt = 'Carbon\Carbon';
     public $updatedAt = 'Carbon\Carbon';
 }
