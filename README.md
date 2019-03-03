@@ -44,7 +44,7 @@ To create the struct, simply instantiate a new object with an array of propertie
 
 use App\Structs\CarStruct;
 
-$s = new CarStruct([
+$car = new CarStruct([
     'id' => 12,
     'model' => 'Model S',
     'mark' => 'Tesla',
