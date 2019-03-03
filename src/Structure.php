@@ -105,4 +105,14 @@ trait Structure
     {
         return is_double($suspect);
     }
+
+    /**
+     * Checks if suspect is of type null.
+     * @param  mixed $suspect
+     * @return bool
+     */
+    private function isNull($suspect) : bool
+    {
+        return is_null($suspect);
+    }
 }

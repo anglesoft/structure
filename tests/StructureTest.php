@@ -14,6 +14,7 @@ class Transaction
     public $success = false;
     public $amount = 0.0;
     public $time = Carbon::class;
+    public $optional;
 }
 
 final class StructureTest extends TestCase
@@ -26,6 +27,7 @@ final class StructureTest extends TestCase
             'success' => true,
             'amount' => 1.0,
             'time' => \Carbon\Carbon::now(),
+            'optional' => null,
         ]);
 
         $this->assertTrue($transaction->success);
@@ -41,6 +43,7 @@ final class StructureTest extends TestCase
             'success' => true,
             'amount' => 1.0,
             'time' => \Carbon\Carbon::now(),
+            'optional' => 'filled with some string'
         ]);
     }
 
